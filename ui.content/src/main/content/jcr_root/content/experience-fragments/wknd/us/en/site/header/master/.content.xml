@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2023-01-23T10:30:51.786+01:00"
+        cq:lastModifiedBy="admin"
         cq:tags="[]"
         cq:template="/conf/wknd/settings/wcm/templates/xf-web-variation"
         cq:xfMasterVariation="{Boolean}true"
@@ -10,25 +12,64 @@
         jcr:title="Header"
         sling:resourceType="wknd/components/xfpage">
         <root
+            jcr:lastModified="{Date}2023-01-23T10:22:48.962+01:00"
+            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wknd/components/container"
-            layout="simple">
+            layout="responsiveGrid">
+            <image
+                jcr:created="{Date}2023-01-23T10:23:37.059+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2023-01-23T10:28:52.045+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wknd/components/image"
+                alt="WKND Logo"
+                altValueFromDAM="false"
+                displayPopupTitle="true"
+                fileReference="/content/dam/wknd/en/site/wknd-logo-dk.svg"
+                imageFromPageImage="false"
+                isDecorative="false"
+                linkTarget="_self"
+                linkURL="/content/wknd/us/en"
+                titleValueFromDAM="true">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="2"/>
+                </cq:responsive>
+            </image>
             <navigation
+                jcr:lastModified="{Date}2023-01-23T10:29:34.770+01:00"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wknd/components/navigation"
                 collectAllPages="false"
+                disableShadowing="false"
                 navigationRoot="/content/wknd/us/en"
                 skipNavigationRoot="false"
-                structureDepth="1"/>
-            <languagenavigation
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="wknd/components/languagenavigation"
-                navigationRoot="/content/wknd/us"
-                structureDepth="2"/>
+                structureDepth="1"
+                structureStart="1">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="8"/>
+                </cq:responsive>
+            </navigation>
             <search
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wknd/components/search"
-                searchRoot="/content/wknd/us"/>
+                searchRoot="/content/wknd/us">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="2"/>
+                </cq:responsive>
+            </search>
+            <logo/>
         </root>
     </jcr:content>
 </jcr:root>
