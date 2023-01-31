@@ -1245,7 +1245,7 @@ Bundle-DocURL:
         <!--exclusions>
           <exclusion>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
+            <artifactId>slf4j-test</artifactId>
           </exclusion>
         </exclusions-->
                     
@@ -1423,7 +1423,7 @@ Bundle-DocURL:
                         
         <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
                         
-        <version>4.1.8</version>
+        <version>4.1.0</version>
                         
         <scope>test</scope>
                     
@@ -1460,9 +1460,23 @@ Bundle-DocURL:
         <version>1.0.1</version>
                         
         <scope>test</scope>
+
+        <!--exclusions>
+          <exclusion>
+            <groupId> uk.org.lidalia</groupId>
+            <artifactId>lidalia-slf4j-ext</artifactId>
+          </exclusion>
+        </exclusions-->
                     
       </dependency>
-              
+
+      <!--> Solution for http://javax.xml.xmlconstants/feature/secure-processing is not recognized. error. <-->
+      <dependency>
+        <groupId>xerces</groupId>
+        <artifactId>xercesImpl</artifactId>
+        <version>2.12.2</version>
+      </dependency>
+
     </dependencies>
         
   </dependencyManagement>
